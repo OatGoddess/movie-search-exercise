@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import {MovieSearchPage} from '../movie/MovieSearchPage'
-import './App.css';
+import React, { Component } from 'react'
+import { MovieSearchPage } from '../movie/MovieSearchPage'
+import './App.css'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-      <MovieSearchPage />
+      <div className='App'>
+        <MovieSearchPage />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

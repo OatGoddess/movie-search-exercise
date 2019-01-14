@@ -3,8 +3,8 @@ import MovieList from './MovieList'
 import MovieSearchBar from './MovieSearchBar'
 
 export const MovieSearchPage = (props) => {
-    return <div>
-        <MovieSearchBar />
-        <MovieList />
-    </div>
+  return <div>
+    <MovieSearchBar />
+    <MovieList />
+  </div>
 }
