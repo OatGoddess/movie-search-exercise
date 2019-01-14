@@ -1,10 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 const MovieList = ({ movies }) => {
   console.log('movies: ', movies)
+  let movieJSX = movies.map(x => x.title)
   return <div>
-    {movies}
+    {movieJSX}
   </div>
 }
 
@@ -23,3 +25,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(MovieList)
+
+MovieList.propTypes = {
+  movies: PropTypes.array
+}
