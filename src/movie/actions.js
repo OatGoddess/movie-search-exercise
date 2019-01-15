@@ -44,10 +44,7 @@ export function fetchMovies (searchText, page) {
       return dispatch(receiveMovies(searchText, page, []))
     }
     dispatch(requestMovies(searchText))
-    console.log('searchText-action: ', searchText)
     let uri = `https://api.themoviedb.org/3/search/movie?page=${page}&include_adult=false&language=en-US&api_key=${apiKey}&query=${searchText}`
-
-    console.log('uri: ', uri)
 
     return fetch(uri)
       .then(
@@ -63,10 +60,7 @@ export function fetchMovies (searchText, page) {
 export function fetchAdditionalMovies (searchText, page) {
   return function (dispatch) {
     dispatch(requestMovies(searchText))
-    console.log('searchText: ', searchText)
     let uri = `https://api.themoviedb.org/3/search/movie?page=${page}&include_adult=false&language=en-US&api_key=${apiKey}&query=${searchText}`
-
-    console.log('uri: ', uri)
 
     return fetch(uri)
       .then(
