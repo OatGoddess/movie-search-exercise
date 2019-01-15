@@ -15,8 +15,11 @@ export default function movies (state = defaultState, action) {
       console.log('updateText: ', action.text)
       return state.set('searchText', fromJS(action.text))
     case RECEIVE_MOVIES:
-      let newMovies = action.movies.map(x => { return { title: x.title } })
-      return state.set('items', fromJS(newMovies))
+      if (action.movies) {
+        return state.set('items', fromJS(action.movies))
+      } else {
+        return state.set('items', fromJS([]))
+      }
     default:
       return state
   }

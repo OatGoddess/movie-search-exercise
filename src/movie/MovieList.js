@@ -1,11 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import MovieCard from './MovieCard'
+import './MovieList.css'
 
 const MovieList = ({ movies }) => {
   console.log('movies: ', movies)
-  let movieJSX = movies.map(x => x.title)
-  return <div>
+  let movieJSX = movies.map(x => <MovieCard key={x.title} movie={x} />)
+  return <div className='movie-grid'>
     {movieJSX}
   </div>
 }
