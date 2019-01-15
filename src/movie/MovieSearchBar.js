@@ -19,8 +19,8 @@ const mapDispatchToProps = dispatch => {
     updateSearchText: text => {
       dispatch(updateSearchText(text))
     },
-    getMovies: searchText => {
-      dispatch(fetchMovies(searchText))
+    getMovies: (searchText) => {
+      dispatch(fetchMovies(searchText, 1))
     }
   }
 }
